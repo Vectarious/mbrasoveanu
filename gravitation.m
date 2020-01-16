@@ -10,7 +10,9 @@ h = (G*M*T^2/(4*pi^2))^(1/3) -R; %height in meters
 h = h/1000
 
 for h = (G*M*T^2/(4*pi^2))^(1/3) -R; %height in meters
-v = sqrt(G*M/h)
-end 
+v = sqrt((G*M)/(R+h))
+v = round(v) 
+h = round(h)
+end
 end 
 
