@@ -33,8 +33,12 @@ to the corresponding power in A
 in other words equivalent to A*A 
 %}
 
+
+% initialize vector elements with zero 
+
  x = zeros(1,100) 
  for n= 0:99
+     % loop iteration to calculate value for each element 
      i = n+1 
      x(i) = sqrt(12)/((-3)^n*(2*n+1))
  end
