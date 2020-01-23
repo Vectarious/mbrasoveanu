@@ -13,7 +13,12 @@ discovery = names(discyear < 1900)
 size(discovery,1)
 
 %plot function that expresses relationship between atomic weight and density
-x = linspace(0,2*pi,45)
-y= ((x))
-plot(x,y)
-title('Density vs. Atomic Weight')
+
+plot(atomicweight,density,"LineWidth",3)
+title('atomic wieght vs. density') 
+
+%there does not exist a direct linear relationship between the varibales
+%produced within the function, the data itself fluctuates rather than being
+%constant 
+
+
