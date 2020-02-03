@@ -9,3 +9,6 @@ Now, you should look at line 10 and ask yourself how this affects the calculatio
 Problem 2's modifications are noted, and they look good. The only thing that is left is to get the velocity calculation correct. The problem starts on line 17 in `gravitationinput.m`
 I can't run problem 3, did you forget to include something?
 I just added the table for problem 3 onto my repository, the program should be able to run now.
+
+## Feb 3
+Program 3 runs now, but you have to take the lesson you should have learned in problem 3 and apply it to problem 4 - because I cannot run any of those programs. What's missing?
