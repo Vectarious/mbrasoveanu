@@ -12,3 +12,5 @@ I just added the table for problem 3 onto my repository, the program should be a
 
 ## Feb 3
 Program 3 runs now, but you have to take the lesson you should have learned in problem 3 and apply it to problem 4 - because I cannot run any of those programs. What's missing?
+
+For problems 4,4a,4b, I added "smallperiodtable.mat", "GlobalTempybyYear.txt", and "GlobalCarbonBudget2018.xlsx" files. The following programs should be able to run now. 
