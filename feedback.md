@@ -14,3 +14,6 @@ I just added the table for problem 3 onto my repository, the program should be a
 Program 3 runs now, but you have to take the lesson you should have learned in problem 3 and apply it to problem 4 - because I cannot run any of those programs. What's missing?
 
 For problems 4,4a,4b, I added "smallperiodtable.mat", "GlobalTempybyYear.txt", and "GlobalCarbonBudget2018.xlsx" files. The following programs should be able to run now. 
+
+## Feb 9
+Problem 3 and 4 are running now. Problem 4a/climate program are hitting some problems still - there are minor mistakes in that code, double check that the file you're referencing is the same as the one in the folder (spelled the same way and everything). Minor details, but details are everything.
