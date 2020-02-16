@@ -17,3 +17,5 @@ For problems 4,4a,4b, I added "smallperiodtable.mat", "GlobalTempybyYear.txt", a
 
 ## Feb 9
 Problem 3 and 4 are running now. Problem 4a/climate program are hitting some problems still - there are minor mistakes in that code, double check that the file you're referencing is the same as the one in the folder (spelled the same way and everything). Minor details, but details are everything.
+
+For Problem 4a I have added the 'smallperiodictable.csv' file that should allow the program to work entirely. In addition, I have completely updated problem 4b with its corresponding files. 
