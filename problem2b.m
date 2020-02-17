@@ -1,20 +1,45 @@
 
-reply = input('Please input a single value or the range of period T in seconds \n start:step:end (for example 90:10:130).. ');
+reply = input('Please input a single value or the range of period T in seconds, minutes, hours \n start:step:end (for example 90:10:130).. ');
 disp(reply)
 T = reply
-
+% applying split function, split T to y 
+y = split(reply);
+% first value of y to be 'z'
+z = y{1}; 
+% second value of y to be 'units' 
+units = y{2}; 
+% turn 'z' from a string to a number 
+T = str2num(z) 
+ 
 %five numbers given as Input 
 %this function calculates altitude h the satelite must have above Earth's
 %surface 
 %T = 90:10:130 ; % min
+
 % Define constants: earth radius, G, earth mass
+
 R = 6.371*10^6; % meters
 G = 6.674*10^(-11); % m^3/(kg*s^2)
 M = 5.972*10^(24); % kilograms
 
+% verify that the period T is a number 
 if ~isnumeric(T)
-    error("mustbenumber")
+    error("must be number")
 end
+% unit conversions for period T 
+switch unit 
+    case 'Seconds' 
+        T = T; 
+    case 'Minutes' 
+        T = T.*60; 
+    case 'Hours' 
+        T = T.*3600; 
+    case 'Days' 
+        T = T.*86400; 
+    otherwise 
+        error("period must be measured in the following units: 'Seconds', 'Minutes', 'Hours', 'Days'") 
+end 
+
 
 T = T*60; % convert to sec  
 h = (G*M*(T.^2)/(4*pi^2)).^(1/3) -R; % height in meters
