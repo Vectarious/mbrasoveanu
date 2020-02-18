@@ -21,3 +21,7 @@ Problem 3 and 4 are running now. Problem 4a/climate program are hitting some pro
 For Problem 4a I have added the 'smallperiodictable.csv' file that should allow the program to work entirely. In addition, I have completely updated problem 4b with its corresponding files. 
 
 For Problem 2b I'm not sure what variable needs to be addressed for applying the split function. I thought it was whatever is defined as input. 
+
+## Feb 18
+Problem 4/4a look good (Though I think you made a slight error on the floating density condition, talk to me on Thursday about that). Problem 4b has 1 tiny mistake still, but otherwise would be working as far as I can tell - look at the file name in the folder and then the file name in your program. For 2b, I think you have the right idea, I would look at the documentation for `input`, and then delete the line `T=reply` that is actually doing nothing. The split function should take the input, true, but then split gives you a cell array, and then you deal with that fine - you have a error in your `switch statement` however. There's a few points in this program that might be giving you trouble, can you be more specific as to the problem you're having?
+
