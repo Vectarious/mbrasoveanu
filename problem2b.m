@@ -1,52 +1,52 @@
+%this function calculates altitude h the satelite must have above Earth's surface
 
-reply = input('Please input a single value or the range of period T in seconds, minutes, hours \n start:step:end (for example 90:10:130).. ');
+reply = input('Please enter period T in seconds, minutes, hours or days\n in format PERIOD<space>UNIT \n for example: \n3600 sec or \n60 min or \n1 hr or \n1 days\nperiod: ', 's');
 disp(reply)
-T = reply
+
 % applying split function, split T to y 
 y = split(reply);
 % first value of y to be 'z'
-z = y{1}; 
+period = y{1}; 
 % second value of y to be 'units' 
-units = y{2}; 
-% turn 'z' from a string to a number 
-T = str2num(z) 
- 
-%five numbers given as Input 
-%this function calculates altitude h the satelite must have above Earth's
-%surface 
-%T = 90:10:130 ; % min
+unit = y{2}; 
+
+% turn 'period' from a string to a number 
+T = str2num(period);
+% verify that the 'period' is a non-infinite positive integer
+% ~isempty(x) && isnumeric(x) && isfinite(x) && x > 0 && x == floor(x)
+if isempty(T) || ~isnumeric(T) || ...  % not a number
+   ~isfinite(T) || ...  % infinite
+   T <= 0 || ...   % negative
+   T~=floor(T)   % not integer 
+    error("Period must be a positive integer.")
+end
+
+
+% unit conversions for period T to seconds 
+switch lower(unit) 
+    case 'sec' 
+        T = T; 
+    case 'min' 
+        T = T.*60; 
+    case 'hr' 
+        T = T.*3600; 
+    case 'days' 
+        T = T.*86400; 
+    otherwise 
+        error("Period must be measured in one of the following units: 'sec', 'min', 'hr', 'days'") 
+end  
 
 % Define constants: earth radius, G, earth mass
 
 R = 6.371*10^6; % meters
 G = 6.674*10^(-11); % m^3/(kg*s^2)
 M = 5.972*10^(24); % kilograms
-
-% verify that the period T is a number 
-if ~isnumeric(T)
-    error("must be number")
-end
-% unit conversions for period T 
-switch unit 
-    case 'Seconds' 
-        T = T; 
-    case 'Minutes' 
-        T = T.*60; 
-    case 'Hours' 
-        T = T.*3600; 
-    case 'Days' 
-        T = T.*86400; 
-    otherwise 
-        error("period must be measured in the following units: 'Seconds', 'Minutes', 'Hours', 'Days'") 
-end 
-
-
-T = T*60; % convert to sec  
+  
 h = (G*M*(T.^2)/(4*pi^2)).^(1/3) -R; % height in meters
 h = h/1000; % height in kilometers
 
 if h<0 
-    error("period is too small") 
+    error("Altitude cannot be negative.") 
 end 
 %{
 1. Given that it is required to calculate the altitudes of the satelites, 
@@ -68,6 +68,3 @@ v = round(v)
 h = round(h)
 x = table(v',h')
 disp(x)
-
-% apply function command, units are different variables that are part of
-% the funtion 
