@@ -28,3 +28,6 @@ Problem 4/4a look good (Though I think you made a slight error on the floating d
 I have completed and uploaded problem 2b with the corrections we talked about on Thursday. 
 
 I have uploaded problem 5, the only trouble I keep seeming to have is how to incorperate my unit conversion function into my projectile function. 
+
+## Feb 24
+2b is looking better, you now take the input as a string and deal with that as a whole, but you still have some unit problem in here, it happens on line 46. What happens there and then what do you do after that? Projectile is coming along, it works now for starting and stopping at h=0, you'll have to modify that when you incorporate an initial height. As far as the choice of units, take the easiest path - incorporate the units as a separate input argument (and specify a default value for it). Don't try to take the velocity as a string and then try to split it, this doesn't make much sense in functions since you are putting separate arguments into it already.
