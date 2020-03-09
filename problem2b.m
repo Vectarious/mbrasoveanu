@@ -14,6 +14,10 @@ unit = y{2};
 T = str2num(period);
 % verify that the 'period' is a non-infinite positive integer
 % ~isempty(x) && isnumeric(x) && isfinite(x) && x > 0 && x == floor(x)
+%
+% for error negate the above: ~(non-infinite positive integer)
+% ~(~isempty(x) && isnumeric(x) && isfinite(x) && x > 0 && x == floor(x))
+% not(a AND b) = (not a) OR (not B)
 if isempty(T) || ~isnumeric(T) || ...  % not a number
    ~isfinite(T) || ...  % infinite
    T <= 0 || ...   % negative
@@ -38,16 +42,17 @@ end
 
 % Define constants: earth radius, G, earth mass
 
-R = 6.371*10^6; % meters
+R = 6.371*10^(6); % meters
 G = 6.674*10^(-11); % m^3/(kg*s^2)
 M = 5.972*10^(24); % kilograms
   
-h = (G*M*(T.^2)/(4*pi^2)).^(1/3) -R; % height in meters
-h = h/1000; % height in kilometers
+h = (G*M*(T.^2)/(4*pi^2)).^(1/3) - R; % height in meters
 
 if h<0 
     error("Altitude cannot be negative.") 
 end 
+
+h = h/1000; % height in kilometers
 %{
 1. Given that it is required to calculate the altitudes of the satelites, 
 there is a simplified version in which the calculations can be executed for
