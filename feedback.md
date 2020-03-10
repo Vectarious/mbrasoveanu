@@ -34,3 +34,7 @@ I have uploaded problem 5, the only trouble I keep seeming to have is how to inc
 
 Problem 2b: I went over the program, and I debugged it. I didn't seem to come across any conflict in terms of the unit conversion. When I initially uploaded the program to GitHub, I think that I posted a version before the correct final saved one. 
 Problem 5: I incorporated a new input variable for the function which is the initial height. I did this by applying the switch command for the different cases across the program. Aditionally, I added the graph for the trajectory of the projectile. 
+
+## Mar 9
+Looking at prob 2b, you may have uploaded the wrong version, but you still have a unit error in your program, Problem2b.m (at least the version I have) On line 71 you calculate the velocity using `h` (in km from line 55) and `R` (in meters from line 45). Am I missing something?
+The projectile program, though is good, I get the correct answers and the default arguments are working as encoded. The one thing that isn't in the program is the graph - you have a function that would graph the results, but it is never called.
