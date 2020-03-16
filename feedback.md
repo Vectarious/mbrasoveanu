@@ -38,3 +38,5 @@ Problem 5: I incorporated a new input variable for the function which is the ini
 ## Mar 9
 Looking at prob 2b, you may have uploaded the wrong version, but you still have a unit error in your program, Problem2b.m (at least the version I have) On line 71 you calculate the velocity using `h` (in km from line 55) and `R` (in meters from line 45). Am I missing something?
 The projectile program, though is good, I get the correct answers and the default arguments are working as encoded. The one thing that isn't in the program is the graph - you have a function that would graph the results, but it is never called.
+## Mar 16
+I didn't see much progress this week.
