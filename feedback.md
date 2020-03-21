@@ -40,3 +40,5 @@ Looking at prob 2b, you may have uploaded the wrong version, but you still have 
 The projectile program, though is good, I get the correct answers and the default arguments are working as encoded. The one thing that isn't in the program is the graph - you have a function that would graph the results, but it is never called.
 ## Mar 16
 I didn't see much progress this week.
+
+I wasn't able to work much last week because all of the sudden changes. I have just uploaded my "motion.py". I think what I struggled with the most was writing the correct syntax for converting the units. I'm not sure if that's the right approach.
