@@ -44,3 +44,6 @@ I didn't see much progress this week.
 I wasn't able to work much last week because all of the sudden changes. I have just uploaded my "motion.py". I think what I struggled with the most was writing the correct syntax for converting the units. I'm not sure if that's the right approach.
 
 I have uploaded Project 1 which consists of 'ptable.m' and 'periodictabledata.csv'
+
+## Mar 24
+Your ptable program looks good, it is well organized and seems to be displaying the correct answers. The problem is that there are some paths you program goes down that don't assign output values, it displays results to the command line, but those values are not stored anywhere, you need to assign outputs to varargout in every possible else statement that you have.
