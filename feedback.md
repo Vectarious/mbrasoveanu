@@ -42,3 +42,5 @@ The projectile program, though is good, I get the correct answers and the defaul
 I didn't see much progress this week.
 
 I wasn't able to work much last week because all of the sudden changes. I have just uploaded my "motion.py". I think what I struggled with the most was writing the correct syntax for converting the units. I'm not sure if that's the right approach.
+
+I have uploaded Project 1 which consists of 'ptable.m' and 'periodictabledata.csv'
