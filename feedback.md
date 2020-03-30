@@ -49,3 +49,5 @@ I have uploaded Project 1 which consists of 'ptable.m' and 'periodictabledata.cs
 Your ptable program looks good, it is well organized and seems to be displaying the correct answers. The problem is that there are some paths you program goes down that don't assign output values, it displays results to the command line, but those values are not stored anywhere, you need to assign outputs to varargout in every possible else statement that you have.
 
 I have made the changes to Project 1. In each of my statements I assigned outputs to varargout{1} and varargout{2}. 
+## Mar 30
+I see that you are now assigning output values, but now I'm running into problems around line 115 with indexing, it appears that the {} indexing for this type of variable isn't supported. I am still missing quite a few of your python assignments, are you making progress on those?
