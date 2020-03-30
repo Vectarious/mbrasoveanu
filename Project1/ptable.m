@@ -48,7 +48,8 @@ if nargin == 0
     xlabel('Atomic Number') 
     ylabel('Mass (MeV)')
     title('Mass vs. Atomic Number') 
-    legend('r = semi-emp formula mass vs. atomic number', 'g+ = atomic weight vs. atomic number') 
+    legend('r = semi-emp formula mass vs. atomic number',...
+        'g+ = atomic weight vs. atomic number') 
     hold off 
     
     figure(2) 
@@ -56,6 +57,11 @@ if nargin == 0
     xlabel('Atomic Number')
     ylabel('bepn (MeV)')
     title('BEPN vs. Atomic Number') 
+    
+    varargout{1} = table(TZ,SefResults{:,{'Mass'}},AWMASS,'VariableNames',...
+        {'AtomicNumber','MassMeV','AtomicWeight'});
+    varargout{2} = table(TZ,SefResults{:,{'BindingEnergyPerNucleon'}},...
+        'VariableNames',{'AtomicNumber','bepnMeV'})
    
 %if one argument is numeric    
 elseif nargin == 1
@@ -77,6 +83,10 @@ elseif nargin == 1
     OUTTABLE = PDATA(RowIndex,:);
     disp(OUTTABLE)
     disp("Atomic Mass = " + mass + " MeV ")
+
+    varargout{1} = mass;
+    varargout{2} = OUTTABLE;
+    
 %if both input arguments are numeric     
 elseif nargin == 2 
      arg1 = varargin{1};
@@ -115,12 +125,16 @@ elseif nargin == 2
         %calculate the stability of the isotopes 
         [mass,be,~] = massformula(A,Z); 
         disp("Atomic Mass = " + mass + " MeV ")
+        varargout{1} = mass;
 
         if be > 0
             disp('Isotope is stable')
+            varargout{2} = 'stable';
         else
             disp('Isotope is unstable')
+            varargout{2} = 'unstable';
         end
+        
     end
 end
 
