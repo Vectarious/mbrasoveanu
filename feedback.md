@@ -47,3 +47,5 @@ I have uploaded Project 1 which consists of 'ptable.m' and 'periodictabledata.cs
 
 ## Mar 24
 Your ptable program looks good, it is well organized and seems to be displaying the correct answers. The problem is that there are some paths you program goes down that don't assign output values, it displays results to the command line, but those values are not stored anywhere, you need to assign outputs to varargout in every possible else statement that you have.
+
+I have made the changes to Project 1. In each of my statements I assigned outputs to varargout{1} and varargout{2}. 
