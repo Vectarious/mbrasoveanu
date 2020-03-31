@@ -51,3 +51,5 @@ Your ptable program looks good, it is well organized and seems to be displaying 
 I have made the changes to Project 1. In each of my statements I assigned outputs to varargout{1} and varargout{2}. 
 ## Mar 30
 I see that you are now assigning output values, but now I'm running into problems around line 115 with indexing, it appears that the {} indexing for this type of variable isn't supported. I am still missing quite a few of your python assignments, are you making progress on those?
+
+I will take a look at that soon. In terms of python, please check "motion.py". In addition, please take a look at problem 4b for the minor error that I mentioned in my email to you. Thank you! 
